@@ -1,24 +1,3 @@
-/* Old CSS */
-body,
-main {
-  display: flex;
-}
-body {
-  flex-direction: column;
-}
-main {
-  flex-direction: row;
-  flex: auto;
-}
-article {
-  flex: 2;
-  overflow-y: auto;
-}
-aside {
-  flex: 1;
-}
-
-/* Updated and Improved CSS */
 body {
   flex-direction: column;
   font-family: Arial, sans-serif;
@@ -30,10 +9,10 @@ body {
 }
 
 main {
+  display: flex; /* Ensure main uses Flexbox */
   flex-direction: row;
   flex: auto;
-  margin: 20px;
-  gap: 20px;
+  gap: 20px; /* Adds spacing between <article> and <aside> */
 }
 
 header {
@@ -62,7 +41,7 @@ header nav ul li a:hover {
 }
 
 article {
-  flex: 2;
+  flex: 2; /* Takes 2/3 of the space in <main> */
   overflow-y: auto;
   padding: 20px;
   background: white;
@@ -126,7 +105,7 @@ table tbody tr:nth-child(odd) {
 }
 
 aside {
-  flex: 1;
+  flex: 1; /* Takes 1/3 of the space in <main> */
   background: #ecf0f1;
   padding: 20px;
   border-radius: 8px;
@@ -149,4 +128,10 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* New Rule: Make the logo bigger */
+header nav ul .logo {
+  font-size: 1.5em;
+  margin-right: auto;
 }
